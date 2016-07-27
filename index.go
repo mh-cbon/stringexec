@@ -9,10 +9,10 @@ import (
 
 // Return a new exec.Cmd object for the given command string
 func Command(cmd string) (*exec.Cmd, error) {
-  cwd, err := os.Getwd()
-  if err!=nil {
-    return nil, err
-  }
+	cwd, err := os.Getwd()
+	if err != nil {
+		return nil, err
+	}
 	if runtime.GOOS == "windows" {
 		return WindowsCommand(cwd, cmd)
 	}

@@ -5,13 +5,13 @@ import (
 )
 
 func Test1(t *testing.T) {
-  expected := "ok\nok\n"
-  linux, err := Command("echo ok && echo ok")
+	expected := "ok\nok\n"
+	linux, err := Command("echo ok && echo ok")
 	if err != nil {
 		t.Errorf("should err=nil, got err=%q\n", err)
 	}
 
-  out, err := linux.Output()
+	out, err := linux.Output()
 	if err != nil {
 		t.Errorf("should err=nil, got err=%q\n", err)
 	}
